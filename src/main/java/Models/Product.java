@@ -1,47 +1,23 @@
 package Models;
 
+import lombok.Data;
+
+@Data
 public class Product {
-    private String productId;
-    private String productName;
-    private int productQuantity;
+    private int id;
+    private String name;
     private String category;
+    private double price;
+    private String image;
 
-    public Product(String productId, String productName, int productQuantity, String category) {
-        this.productId = productId;
-        this.productName = productName;
-        this.productQuantity = productQuantity;
-        this.category= category;
-    }
-
-    public String getProductId() {
-        return productId;
-    }
-
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public int getProductQuantity() {
-        return productQuantity;
-    }
-
-    public void setProductQuantity(int productQuantity) {
-        this.productQuantity = productQuantity;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price='" + price + '\'' +
+                ", image='" + image + '\'' +
+                '}';
     }
 }

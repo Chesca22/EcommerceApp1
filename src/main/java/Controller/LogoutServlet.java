@@ -4,11 +4,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(value = "/LogoutServlet")
 public class LogoutServlet extends HttpServlet {
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response){
+private static final long serialVersionUID = 1L;
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+            PrintWriter out = response.getWriter();
+           if(request.getSession().getAttribute("auth") != null) {
+               request.getSession().removeAttribute("auth");
+               request.getSession().invalidate();
+               response.sendRedirect("login.jsp");
+           } else{
+               response.sendRedirect("index.jsp");
+           }
 
     }
 }

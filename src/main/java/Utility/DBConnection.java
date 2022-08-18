@@ -4,24 +4,27 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import static java.lang.Class.forName;
 
 public class DBConnection {
-    private static DBConnection instance;
-    private Connection connection;
 
-    private DBConnection() {
-        try {
-            class.forName("com.mysql.cj.jdbc.Diver");
+    private static Connection connection;
 
-            String url = "jdbc:mysql://localhost:3306/CompanyDB";
-            String username = "root";
-            String password = "francisca";
+    public static Connection getConnection () throws ClassNotFoundException, SQLException {
 
-            this.connection = DriverManager.getConnection(url, username, password);
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
 
-        }
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+          connection =  DriverManager.getConnection("jdbc:mysql://localhost:3306/CommerceDB", "root", "francisca");
+
+          //  System.out.println("connected");
+
+
+        return connection;
     }
+
+
+
+
+
+
 }
