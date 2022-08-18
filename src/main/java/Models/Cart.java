@@ -1,11 +1,12 @@
 package Models;
 
-import java.util.List;
+import lombok.Data;
 
-public class Cart {
-    private int cartId;
-    private List<Product> myCart;
-    private String userId;
-    private String productId;
+@Data
+
+public class Cart extends Product {
+    private int quantity;
+
+
 
 }
