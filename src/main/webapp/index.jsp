@@ -38,14 +38,22 @@ request.setAttribute("auth", auth);
 <body>
 <%@include file="includes/navBar.jsp" %>
 
+<<<<<<< HEAD
 
 <div class="container-fluid mt-3 px-5">
     <div class="card-header my-3" style="background-color: gray; padding:13px"> All Products</div>
     <div class="row justify-content-start">
+=======
+<div class="container" >
+    <div class="card-header my-3" style="background-color: gray; padding:13px"> All Products</div>
+
+    <div class="row mt-3 d-flex justify-content-between">
+>>>>>>> origin/master
         <%
             if(!products.isEmpty()){
                 for(Product p:products){ %>
 
+<<<<<<< HEAD
                     <div class="col-md-3 mb-2">
                         <div class="card">
                            <img style="width: auto; height: 200px;" class="card-img-top" src="product-images/<%= p.getImage()%>" alt="card image">
@@ -66,5 +74,32 @@ request.setAttribute("auth", auth);
     </div>
 </div>
 
+=======
+        <div class="col-md-3 my-3">
+            <div class="card w-100">
+                <img class="card-img-top" src="product-images/<%= p.getImage()%>" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><%= p.getName() %></h5>
+                    <h6 class="price">Price: $<%= p.getPrice()%></h6>
+                    <h6 class="category">Category: <%= p.getCategory()%></h6>
+                    <div class="mt-3 d-flex justify-content-between">
+                        <a href="add-to-cart?id=<%= p.getId()%>" class="btn btn-dark">Add to cart</a>
+                        <a href="orderNow?quantity=1&id=<%= p.getId()%>" class="btn btn-primary">Buy Now</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+              <%  }
+            } %>
+
+
+
+</div>
+</div>
+
+
+>>>>>>> origin/master
 </body>
 </html>

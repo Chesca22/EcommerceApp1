@@ -10,8 +10,11 @@ public class Users {
     private String LastName;
     private String email;
     private String password;
+<<<<<<< HEAD
 
     private String username;
+=======
+>>>>>>> origin/master
 
     @Override
     public String toString() {

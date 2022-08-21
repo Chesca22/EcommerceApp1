@@ -5,7 +5,11 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <%
+<<<<<<< HEAD
     Users auth = (Users)request.getSession().getAttribute("auth");
+=======
+    Users auth = (Users) request.getSession().getAttribute("auth");
+>>>>>>> origin/master
     if(auth != null){
       //  request.setAttribute("auth", auth);
         response.sendRedirect("index.jsp");
@@ -29,7 +33,11 @@
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+<<<<<<< HEAD
                 <div class="card text-white" style="border-radius: 1rem; background-color: slategray">
+=======
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+>>>>>>> origin/master
                     <div class="card-body p-5 text-center">
 
                         <div class="mb-md-5 mt-md-4 pb-5">
@@ -66,6 +74,7 @@
     </div>
 </section>
 <style>
+<<<<<<< HEAD
  /*   .gradient-custom {
         /* fallback for old browsers */
       /*  background: #ffffff;
@@ -75,6 +84,17 @@
 
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
      /*   background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+=======
+    .gradient-custom {
+        /* fallback for old browsers */
+        background: #ffffff;
+
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+>>>>>>> origin/master
     }
 </style>
 

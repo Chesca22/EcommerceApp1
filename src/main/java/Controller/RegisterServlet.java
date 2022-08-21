@@ -13,18 +13,29 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+<<<<<<< HEAD
 import static Constants.QueryClass.RegisterUser_query;
 
+=======
+>>>>>>> origin/master
 
 @WebServlet(value = "/register")
 public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
+<<<<<<< HEAD
   //  private Connection connection;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
         RequestDispatcher dispatcher = null;
         Connection connection = null;
+=======
+    private Connection connection;
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        RequestDispatcher dispatcher = null;
+        Connection con = null;
+>>>>>>> origin/master
        // PrintWriter out = response.getWriter();
         String firstName = request.getParameter("first_name");
         String lastName = request.getParameter("last_name");
@@ -33,8 +44,13 @@ public class RegisterServlet extends HttpServlet {
 
                 try {
             Class.forName("com.mysql.cj.jdbc.Driver");
+<<<<<<< HEAD
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/CommerceDB?useSSL=false", "root",  "francisca");
             PreparedStatement pst = connection.prepareStatement(RegisterUser_query);
+=======
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CommerceDB?useSSL=false", "root",  "francisca");
+            PreparedStatement pst = con.prepareStatement("insert  into users(firstName,LastName,email,password)values (?,?,?,?)");
+>>>>>>> origin/master
 
             pst.setString(1, firstName);
             pst.setString(2, lastName);
@@ -59,7 +75,11 @@ public class RegisterServlet extends HttpServlet {
 
                 finally {
                     try {
+<<<<<<< HEAD
                         connection.close();
+=======
+                        con.close();
+>>>>>>> origin/master
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
                     }

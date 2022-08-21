@@ -9,7 +9,11 @@
 
 
 
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg" style="background-color: slategray">
+=======
+<nav class="navbar navbar-expand-lg bg-light">
+>>>>>>> origin/master
     <div class="container">
         <a class="navbar-brand" href="admin.jsp" style="font-size:xx-small"><i class="fab fa-4x">E-Shopping</i></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -62,6 +66,22 @@
         color: #262626;
     }
 
+<<<<<<< HEAD
+=======
+    /* Color of the navbar AFTER scroll */
+    .navbar-scrolled {
+      /*  background-color: #fff;*/
+    }
+
+    /* An optional height of the navbar AFTER scroll */
+
+    /*.navbar-scroll.navbar-scrolled {*/
+    /*    padding-top: initial;*/
+    /*    padding-bottom: initial;*/
+    /*   !* margin-bottom: auto; *!*/
+    /*}*/
+
+>>>>>>> origin/master
     .navbar-brand {
         color: bisque;
         font-family: "Noto Sans Old Italic";
