@@ -26,13 +26,12 @@
     <div class="card mx-4 mx-md-5 shadow-5-strong" style="
         margin-top: -100px;
         background: hsla(0, 0%, 100%, 0.8);
-        backdrop-filter: blur(30px);
-        ">
+        backdrop-filter: blur(30px);">
         <div class="card-body py-5 px-md-5">
 
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
-                    <h2 class="fw-bold mb-5">Sign up now</h2>
+                    <h2 class="fw-bold mb-5">Admin signUp</h2>
                     <form action="admin_login" method="post">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <div class="row">
@@ -71,6 +70,12 @@
                         <button type="submit" class="btn btn-primary btn-block mb-4" >
                             Sign up
                         </button>
+
+                        <div>
+                            <p>
+                                <a href="admin.jsp" class="text-white-50 fw-bold"> Login</a>
+                            </p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -83,7 +88,7 @@
 <script type="text/javascript">
     var status = document.getElementById("status").value;
     if(status ==  "success"){
-        swal("Congratulation!, Account created successfully");
+        swal("welcome Admin!, Account created successfully, now login");
         //
     }
 

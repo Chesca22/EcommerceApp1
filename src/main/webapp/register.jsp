@@ -74,6 +74,13 @@
                         <button type="submit" class="btn btn-primary btn-block mb-4" >
                             Sign up
                         </button>
+
+                        <div>
+
+                            <a href="login.jsp" class="text fw-bold"> Login</a>
+
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -86,7 +93,7 @@
 <script type="text/javascript">
     var status = document.getElementById("status").value;
     if(status ==  "success"){
-        swal("Congratulation!, Account created successfully");
+        swal("Congratulation!, Account created successfully, continue to login");
         //
     }
 

@@ -27,7 +27,7 @@ import java.sql.SQLException;
             try  ( PrintWriter out = response.getWriter()) {
 
 
-                //  collecting the email and password submitted by user
+                //  collecting the username and password submitted by admin
                 String username = request.getParameter("login-username");
                 String password = request.getParameter("login-password");
 

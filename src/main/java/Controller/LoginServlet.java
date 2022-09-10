@@ -36,7 +36,6 @@ public class LoginServlet extends HttpServlet {
                 Users users = udao.userLogin(email, password);
 
                 if (users != null){
-                  //  that is we have our user object
                       // out.print("user login");
                     request.getSession().setAttribute("auth",users);
                     response.sendRedirect("cart.jsp");

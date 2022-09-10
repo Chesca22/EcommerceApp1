@@ -11,18 +11,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-<<<<<<< HEAD
 import static Constants.QueryClass.*;
 
 @Data
 public class ProductDAO {
     private Connection connection;
-=======
-@Data
-public class ProductDAO {
-    private Connection connection;
-    private String query;
->>>>>>> origin/master
     private PreparedStatement preparedStatement;
     private ResultSet rs;
 
@@ -34,12 +27,7 @@ public class ProductDAO {
     public List<Product> getAllProducts(){
        List<Product> products = new ArrayList<Product>();
        try{
-<<<<<<< HEAD
            preparedStatement = this.connection.prepareStatement(AllProduct_query);
-=======
-           query = "select * from Product";
-           preparedStatement = this.connection.prepareStatement(query);
->>>>>>> origin/master
            rs= preparedStatement.executeQuery();
            while (rs.next()){
                Product row = new Product();
@@ -63,12 +51,7 @@ public class ProductDAO {
           try{
               if(cartList.size() >0){
                   for(Cart item:cartList){
-<<<<<<< HEAD
                   preparedStatement = this.connection.prepareStatement(Product_query);
-=======
-                  query = "select * from Product where id=?";
-                  preparedStatement = this.connection.prepareStatement(query);
->>>>>>> origin/master
                   preparedStatement.setInt(1,item.getId());
                   rs = preparedStatement.executeQuery();
                   while(rs.next()){
@@ -93,12 +76,7 @@ public class ProductDAO {
           double sum=0;
           if(cartList.size()>0){
               for(Cart item:cartList){
-<<<<<<< HEAD
                   preparedStatement = this.connection.prepareStatement(Price_query);
-=======
-                  query = "select price from Product where id=?";
-                  preparedStatement = this.connection.prepareStatement(query);
->>>>>>> origin/master
                   preparedStatement.setInt(1, item.getId());
                   rs = preparedStatement.executeQuery();
 
